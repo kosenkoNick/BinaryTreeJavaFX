@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.stage.Stage?>
+
+<Stage xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.binarytreejavafx.Controller">
+    <scene>
+        <Scene>
+            <VBox alignment="CENTER" prefWidth="700.0">
+                <VBox fx:id="box" alignment="CENTER">
+               <GridPane fx:id="tier0">
+                  <columnConstraints>
+                     <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                  <children>
+                     <Label fx:id="root" alignment="CENTER" prefHeight="70.0" prefWidth="70.0" style="-fx-border-width: 2; -fx-border-color: #000000; -fx-border-radius: 100; -fx-background-radius: 100;">
+                        <font>
+                           <Font size="17.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </GridPane>
+               <GridPane fx:id="tier1">
+                  <columnConstraints>
+                     <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+               </GridPane>
+               <GridPane fx:id="tier2">
+                 <columnConstraints>
+                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                 </columnConstraints>
+                 <rowConstraints>
+                   <RowConstraints minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+                 </rowConstraints>
+               </GridPane>
+               <GridPane fx:id="tier3">
+                  <columnConstraints>
+                     <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+               </GridPane>
+                </VBox>
+                <HBox layoutX="3.0" layoutY="361.0" prefHeight="38.0" prefWidth="692.0" spacing="20.0">
+                    <padding>
+                        <Insets left="20.0" right="20.0" top="7.0" />
+                    </padding>
+                    <Label prefHeight="30.0" prefWidth="66.0" text="Enter a key: " />
+                    <TextField fx:id="inputText" prefHeight="26.0" prefWidth="60.0" />
+                    <Button mnemonicParsing="false" onAction="#addValue" text="Insert" />
+                    <Button mnemonicParsing="false" onAction="#deleteValue" text="Delete" />
+                    <Button mnemonicParsing="false" text="Show inorder" />
+                    <Button mnemonicParsing="false" text="Show preorder" />
+                    <Button mnemonicParsing="false" text="Show postorder" />
+                </HBox>
+            </VBox>
+        </Scene>
+    </scene>
+</Stage>
